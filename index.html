@@ -1,264 +1,739 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصتي التعليمية</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>منصتي | منصة التعليم</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Tahoma, Arial, sans-serif;
+}
 
-        body {
-            background: #f5f7fb;
-            color: #222;
-        }
+body{
+    background:#f6f8fc;
+    color:#172033;
+}
 
-        /* شريط التنقل */
-        nav {
-            background: white;
-            padding: 18px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-        }
+/* ===== HEADER ===== */
+header{
+    height:75px;
+    background:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 7%;
+    box-shadow:0 2px 15px rgba(0,0,0,.06);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
 
-        .logo {
-            font-size: 25px;
-            font-weight: bold;
-            color: #4f46e5;
-        }
+.logo{
+    font-size:27px;
+    font-weight:bold;
+    color:#4936d9;
+}
 
-        nav ul {
-            display: flex;
-            gap: 25px;
-            list-style: none;
-        }
+.logo span{
+    color:#16b89d;
+}
 
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-size: 16px;
-        }
+nav{
+    display:flex;
+    gap:28px;
+}
 
-        .login {
-            background: #4f46e5;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 8px;
-            text-decoration: none;
-        }
+nav a{
+    text-decoration:none;
+    color:#596174;
+    font-size:15px;
+}
 
-        /* القسم الرئيسي */
-        .hero {
-            padding: 80px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 40px;
-        }
+nav a:hover{
+    color:#4936d9;
+}
 
-        .hero-text {
-            max-width: 600px;
-        }
+.login-btn{
+    background:#4936d9;
+    color:white;
+    padding:11px 22px;
+    border-radius:10px;
+    text-decoration:none;
+}
 
-        .hero h1 {
-            font-size: 45px;
-            margin-bottom: 20px;
-            line-height: 1.3;
-        }
+/* ===== HERO ===== */
+.hero{
+    min-height:540px;
+    padding:70px 7%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+    background:linear-gradient(135deg,#f0eeff,#e9faf7);
+}
 
-        .hero h1 span {
-            color: #4f46e5;
-        }
+.hero-text{
+    max-width:570px;
+}
 
-        .hero p {
-            font-size: 18px;
-            color: #666;
-            line-height: 1.8;
-            margin-bottom: 30px;
-        }
+.badge{
+    display:inline-block;
+    background:#e3e0ff;
+    color:#4936d9;
+    padding:9px 17px;
+    border-radius:30px;
+    margin-bottom:20px;
+    font-size:14px;
+}
 
-        .start {
-            display: inline-block;
-            background: #4f46e5;
-            color: white;
-            padding: 14px 30px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-size: 17px;
-        }
+.hero h1{
+    font-size:48px;
+    line-height:1.35;
+    margin-bottom:18px;
+}
 
-        .hero-box {
-            width: 350px;
-            height: 280px;
-            background: #e0e7ff;
-            border-radius: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 90px;
-        }
+.hero h1 span{
+    color:#4936d9;
+}
 
-        /* المواد */
-        .courses {
-            padding: 50px 7%;
-        }
+.hero p{
+    color:#687184;
+    font-size:17px;
+    line-height:1.9;
+    margin-bottom:28px;
+}
 
-        .courses h2 {
-            text-align: center;
-            margin-bottom: 35px;
-            font-size: 30px;
-        }
+.hero-buttons{
+    display:flex;
+    gap:14px;
+}
 
-        .course-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
+.btn{
+    padding:14px 25px;
+    border-radius:11px;
+    text-decoration:none;
+    font-weight:bold;
+}
 
-        .course {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.07);
-        }
+.primary{
+    background:#4936d9;
+    color:white;
+}
 
-        .course-icon {
-            font-size: 45px;
-            margin-bottom: 15px;
-        }
+.secondary{
+    background:white;
+    color:#4936d9;
+    border:1px solid #ddd9ff;
+}
 
-        .course h3 {
-            margin-bottom: 10px;
-        }
+/* ===== HERO CARD ===== */
+.dashboard{
+    width:400px;
+    background:white;
+    padding:20px;
+    border-radius:25px;
+    box-shadow:0 20px 50px rgba(50,40,120,.15);
+}
 
-        .course p {
-            color: #777;
-        }
+.dashboard-top{
+    background:#4936d9;
+    color:white;
+    padding:20px;
+    border-radius:18px;
+    margin-bottom:15px;
+}
 
-        /* الفوتر */
-        footer {
-            margin-top: 50px;
-            background: #111827;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
+.dashboard-top h3{
+    margin-bottom:8px;
+}
 
-        /* للموبايل */
-        @media (max-width: 768px) {
+.user-card{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:15px;
+    background:#f6f7fb;
+    border-radius:13px;
+    margin-bottom:10px;
+}
 
-            nav ul {
-                display: none;
-            }
+.user-icon{
+    width:45px;
+    height:45px;
+    border-radius:12px;
+    background:#e6e3ff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+}
 
-            .hero {
-                flex-direction: column;
-                text-align: center;
-                padding: 50px 6%;
-            }
+.user-card p{
+    color:#777f91;
+    font-size:13px;
+    margin-top:4px;
+}
 
-            .hero h1 {
-                font-size: 34px;
-            }
+/* ===== SECTIONS ===== */
+section{
+    padding:70px 7%;
+}
 
-            .hero-box {
-                width: 280px;
-                height: 220px;
-            }
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
 
-            .course-container {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+.section-title h2{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#737b8d;
+}
+
+/* ===== USERS ===== */
+.users{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.user-box{
+    background:white;
+    padding:35px 25px;
+    text-align:center;
+    border-radius:20px;
+    box-shadow:0 5px 25px rgba(0,0,0,.05);
+    transition:.3s;
+}
+
+.user-box:hover{
+    transform:translateY(-7px);
+}
+
+.big-icon{
+    width:75px;
+    height:75px;
+    margin:0 auto 20px;
+    border-radius:20px;
+    background:#eeeaff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:35px;
+}
+
+.user-box h3{
+    margin-bottom:12px;
+}
+
+.user-box p{
+    color:#747c8d;
+    line-height:1.8;
+    font-size:14px;
+}
+
+/* ===== COURSES ===== */
+.courses{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.course{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 25px rgba(0,0,0,.05);
+}
+
+.course-header{
+    height:130px;
+    background:linear-gradient(135deg,#4936d9,#7568ed);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:48px;
+}
+
+.course-body{
+    padding:22px;
+}
+
+.course-body h3{
+    margin-bottom:10px;
+}
+
+.course-body p{
+    color:#747c8d;
+    line-height:1.7;
+    font-size:14px;
+}
+
+/* ===== FEATURES ===== */
+.features{
+    background:white;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.feature{
+    padding:25px;
+    border:1px solid #eeeeee;
+    border-radius:17px;
+    text-align:center;
+}
+
+.feature-icon{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.feature p{
+    color:#737b8d;
+    font-size:13px;
+    line-height:1.7;
+    margin-top:8px;
+}
+
+/* ===== LOGIN ===== */
+.login-section{
+    background:#f6f8fc;
+}
+
+.login-box{
+    max-width:700px;
+    margin:auto;
+    background:linear-gradient(135deg,#4936d9,#7164e9);
+    color:white;
+    padding:50px;
+    border-radius:25px;
+    text-align:center;
+}
+
+.login-box h2{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.login-box p{
+    line-height:1.8;
+    opacity:.9;
+    margin-bottom:25px;
+}
+
+.login-options{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.login-options button{
+    border:none;
+    background:white;
+    color:#4936d9;
+    padding:13px 22px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background:#171b2c;
+    color:#cbd0dd;
+    text-align:center;
+    padding:35px 7%;
+}
+
+footer .logo{
+    margin-bottom:12px;
+}
+
+footer p{
+    font-size:13px;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:850px){
+
+    header{
+        padding:0 5%;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding:55px 5%;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .dashboard{
+        width:100%;
+        max-width:400px;
+    }
+
+    .users,
+    .courses{
+        grid-template-columns:1fr;
+    }
+
+    .feature-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    section{
+        padding:55px 5%;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- شريط التنقل -->
+<!-- HEADER -->
+<header>
+
+    <div class="logo">
+        منصتي<span>.</span>
+    </div>
+
     <nav>
-        <div class="logo"> منصتي</div>
-
-        <ul>
-            <li><a href="#">الرئيسية</a></li>
-            <li><a href="#">المواد</a></li>
-            <li><a href="#">الحصص</a></li>
-            <li><a href="#">الجدول</a></li>
-        </ul>
-
-        <a href="#" class="login">تسجيل الدخول</a>
+        <a href="#home">الرئيسية</a>
+        <a href="#users">المستخدمون</a>
+        <a href="#courses">المقررات</a>
+        <a href="#features">المميزات</a>
     </nav>
 
+    <a href="#login" class="login-btn">تسجيل الدخول</a>
 
-    <!-- الواجهة الرئيسية -->
-    <section class="hero">
+</header>
 
-        <div class="hero-text">
-            <h1>
-                تعلم بسهولة وابدأ
-                <span>رحلتك التعليمية</span>
-            </h1>
 
-            <p>
-                منصة تعليمية تساعدك على متابعة الحصص،
-                دراسة المواد، حل الواجبات والاختبارات
-                ومتابعة تقدمك الدراسي في مكان واحد.
-            </p>
+<!-- HERO -->
+<section class="hero" id="home">
 
-            <a href="#" class="start">
-                ابدأ الدراسة
+    <div class="hero-text">
+
+        <div class="badge">
+            🎓 منصة تعليم إلكتروني
+        </div>
+
+        <h1>
+            تعلّم، درّس، وأدر
+            <span>من مكان واحد</span>
+        </h1>
+
+        <p>
+            منصتي هي منصة تعليمية تساعد الطلاب على متابعة دروسهم،
+            وتتيح للمعلمين إدارة الحصص والمقررات،
+            مع لوحة تحكم متكاملة لمدير النظام.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#login" class="btn primary">
+                ابدأ الآن
+            </a>
+
+            <a href="#users" class="btn secondary">
+                تعرف على المنصة
             </a>
         </div>
 
-        <div class="hero-box">
-            🎓
+    </div>
+
+
+    <div class="dashboard">
+
+        <div class="dashboard-top">
+            <h3>لوحة منصتي</h3>
+            <p>نظام تعليمي متكامل</p>
         </div>
 
-    </section>
+        <div class="user-card">
+            <div class="user-icon">👨‍🎓</div>
+            <div>
+                <strong>الطالب</strong>
+                <p>الدروس والواجبات والنتائج</p>
+            </div>
+        </div>
+
+        <div class="user-card">
+            <div class="user-icon">👨‍🏫</div>
+            <div>
+                <strong>المعلم</strong>
+                <p>إدارة الحصص والطلاب</p>
+            </div>
+        </div>
+
+        <div class="user-card">
+            <div class="user-icon">⚙️</div>
+            <div>
+                <strong>مدير النظام</strong>
+                <p>إدارة المنصة والمستخدمين</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
 
 
-    <!-- المواد الدراسية -->
-    <section class="courses">
+<!-- USERS -->
+<section id="users">
 
-        <h2>المواد الدراسية</h2>
+    <div class="section-title">
+        <h2>مستخدمو منصتي</h2>
+        <p>لكل مستخدم واجهة ووظائف تناسب دوره</p>
+    </div>
 
-        <div class="course-container">
+    <div class="users">
 
-            <div class="course">
-                <div class="course-icon">💻</div>
+        <div class="user-box">
+
+            <div class="big-icon">👨‍🎓</div>
+
+            <h3>الطالب</h3>
+
+            <p>
+                يستطيع الطالب مشاهدة الحصص،
+                متابعة المقررات، حل الواجبات،
+                ومتابعة درجاته ونتائجه.
+            </p>
+
+        </div>
+
+
+        <div class="user-box">
+
+            <div class="big-icon">👨‍🏫</div>
+
+            <h3>المعلم</h3>
+
+            <p>
+                يستطيع المعلم إنشاء الحصص،
+                رفع الدروس والواجبات،
+                ومتابعة أداء الطلاب.
+            </p>
+
+        </div>
+
+
+        <div class="user-box">
+
+            <div class="big-icon">⚙️</div>
+
+            <h3>مدير النظام</h3>
+
+            <p>
+                يستطيع مدير النظام إدارة الطلاب
+                والمعلمين والمقررات ومتابعة
+                النظام بالكامل.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- COURSES -->
+<section id="courses">
+
+    <div class="section-title">
+        <h2>المقررات الدراسية</h2>
+        <p>مساحة منظمة للوصول إلى المحتوى التعليمي</p>
+    </div>
+
+    <div class="courses">
+
+        <div class="course">
+
+            <div class="course-header">
+                💻
+            </div>
+
+            <div class="course-body">
                 <h3>تقنية المعلومات</h3>
-                <p>محاضرات ودروس تقنية</p>
-            </div>
 
-            <div class="course">
-                <div class="course-icon">📐</div>
-                <h3>الرياضيات</h3>
-                <p>دروس وتمارين واختبارات</p>
-            </div>
-
-            <div class="course">
-                <div class="course-icon">🌍</div>
-                <h3>اللغة الإنجليزية</h3>
-                <p>دروس ومحادثات وتدريبات</p>
+                <p>
+                    دروس ومحاضرات في أساسيات
+                    تقنية المعلومات والبرمجة.
+                </p>
             </div>
 
         </div>
 
-    </section>
+
+        <div class="course">
+
+            <div class="course-header">
+                📐
+            </div>
+
+            <div class="course-body">
+                <h3>الرياضيات</h3>
+
+                <p>
+                    محتوى تعليمي وتمارين تساعد
+                    الطالب على تطوير مهاراته.
+                </p>
+            </div>
+
+        </div>
 
 
-    <!-- الفوتر -->
-    <footer>
-        <p>© 2026 منصتي التعليمية - جميع الحقوق محفوظة</p>
-    </footer>
+        <div class="course">
+
+            <div class="course-header">
+                🌍
+            </div>
+
+            <div class="course-body">
+                <h3>اللغة الإنجليزية</h3>
+
+                <p>
+                    دروس ومحتوى تدريبي لتطوير
+                    مهارات اللغة الإنجليزية.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURES -->
+<section class="features" id="features">
+
+    <div class="section-title">
+
+        <h2>مميزات المنصة</h2>
+
+        <p>
+            أدوات تساعد على تنظيم عملية التعليم
+        </p>
+
+    </div>
+
+    <div class="feature-grid">
+
+        <div class="feature">
+            <div class="feature-icon">📚</div>
+            <h3>الدروس</h3>
+            <p>الوصول إلى الدروس والمحتوى التعليمي.</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">📝</div>
+            <h3>الواجبات</h3>
+            <p>إدارة الواجبات والأنشطة الدراسية.</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">📊</div>
+            <h3>النتائج</h3>
+            <p>متابعة درجات وتقدم الطلاب.</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">🔐</div>
+            <h3>حسابات المستخدمين</h3>
+            <p>صلاحيات مختلفة للطالب والمعلم والمدير.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LOGIN -->
+<section class="login-section" id="login">
+
+    <div class="login-box">
+
+        <h2>تسجيل الدخول إلى منصتي</h2>
+
+        <p>
+            اختر نوع حسابك للدخول إلى المساحة الخاصة بك.
+        </p>
+
+        <div class="login-options">
+
+            <button onclick="login('الطالب')">
+                👨‍🎓 طالب
+            </button>
+
+            <button onclick="login('المعلم')">
+                👨‍🏫 معلم
+            </button>
+
+            <button onclick="login('مدير النظام')">
+                ⚙️ مدير النظام
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="logo">
+        منصتي<span>.</span>
+    </div>
+
+    <p>
+        منصة تعليمية لإدارة الحصص والدراسة
+    </p>
+
+    <p style="margin-top:12px;">
+        © 2026 منصتي - جميع الحقوق محفوظة
+    </p>
+
+</footer>
+
+
+<script>
+
+function login(type){
+
+    alert(
+        "تم اختيار حساب " + type +
+        "\nسيتم تجهيز صفحة تسجيل الدخول الخاصة به في الخطوة القادمة."
+    );
+
+}
+
+</script>
 
 </body>
-  </html>
+</html>
