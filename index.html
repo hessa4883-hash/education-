@@ -2,7 +2,6 @@
 <html lang="ar" dir="rtl">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,15 +9,11 @@
 
 <style>
 
-/* =========================
-   الإعدادات العامة
-========================= */
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Tahoma, Arial, sans-serif;
+    font-family:Tahoma,Arial,sans-serif;
 }
 
 html{
@@ -30,18 +25,17 @@ body{
     color:#172033;
 }
 
-/* =========================
-   الشريط العلوي
-========================= */
+/* ================= HEADER ================= */
 
 header{
     height:75px;
-    background:#ffffff;
+    background:white;
     display:flex;
     align-items:center;
     justify-content:space-between;
     padding:0 7%;
     box-shadow:0 3px 20px rgba(0,0,0,.06);
+
     position:sticky;
     top:0;
     z-index:1000;
@@ -59,8 +53,7 @@ header{
 
 nav{
     display:flex;
-    align-items:center;
-    gap:25px;
+    gap:28px;
 }
 
 nav a{
@@ -75,28 +68,25 @@ nav a:hover{
 }
 
 .login-btn{
-    text-decoration:none;
+    border:none;
     background:#4936d9;
     color:white;
-    padding:11px 22px;
-    border-radius:10px;
-    transition:.3s;
+    padding:12px 23px;
+    border-radius:11px;
+    cursor:pointer;
+    font-weight:bold;
 }
 
-.login-btn:hover{
-    background:#3827b8;
-}
-
-/* =========================
-   الصفحة الرئيسية
-========================= */
+/* ================= HERO ================= */
 
 .hero{
     min-height:570px;
     padding:80px 7%;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
+
     gap:50px;
 
     background:
@@ -113,11 +103,16 @@ nav a:hover{
 
 .badge{
     display:inline-block;
+
     background:#e3e0ff;
     color:#4936d9;
+
     padding:9px 18px;
+
     border-radius:30px;
+
     margin-bottom:22px;
+
     font-size:14px;
 }
 
@@ -133,101 +128,116 @@ nav a:hover{
 
 .hero p{
     color:#697286;
+
     font-size:17px;
+
     line-height:2;
+
     margin-bottom:30px;
 }
 
-.hero-buttons{
-    display:flex;
-    gap:14px;
-}
+.start-btn{
+    display:inline-block;
 
-.btn{
-    text-decoration:none;
-    padding:14px 26px;
-    border-radius:12px;
-    font-weight:bold;
-}
-
-.primary{
     background:#4936d9;
+
     color:white;
+
+    text-decoration:none;
+
+    padding:15px 30px;
+
+    border-radius:12px;
+
+    font-weight:bold;
+
+    border:none;
+
+    cursor:pointer;
 }
 
-.secondary{
-    background:white;
-    color:#4936d9;
-    border:1px solid #ddd9ff;
-}
-
-/* =========================
-   بطاقة المنصة
-========================= */
+/* ================= DASHBOARD ================= */
 
 .dashboard{
     width:410px;
+
     background:white;
+
     padding:22px;
+
     border-radius:25px;
-    box-shadow:0 25px 60px rgba(60,50,150,.16);
+
+    box-shadow:
+    0 25px 60px rgba(60,50,150,.16);
 }
 
 .dashboard-top{
-    background:linear-gradient(
+    background:
+    linear-gradient(
         135deg,
         #4936d9,
         #7669ed
     );
 
     color:white;
-    padding:24px;
+
+    padding:25px;
+
     border-radius:18px;
+
     margin-bottom:16px;
 }
 
 .dashboard-top h3{
-    font-size:22px;
     margin-bottom:8px;
 }
 
 .dashboard-top p{
-    opacity:.9;
     font-size:13px;
+    opacity:.9;
 }
 
-.user-card{
+.dashboard-item{
     display:flex;
+
     align-items:center;
+
     gap:13px;
+
     background:#f7f8fc;
+
     padding:16px;
+
     border-radius:14px;
+
     margin-bottom:11px;
 }
 
-.user-icon{
+.dashboard-icon{
     width:48px;
     height:48px;
-    background:#e9e6ff;
+
     border-radius:13px;
 
+    background:#e9e6ff;
+
     display:flex;
+
     align-items:center;
     justify-content:center;
 
     font-size:23px;
 }
 
-.user-card p{
+.dashboard-item p{
     color:#7b8392;
+
     font-size:12px;
+
     margin-top:5px;
 }
 
-/* =========================
-   الأقسام
-========================= */
+/* ================= FEATURES ================= */
 
 section{
     padding:75px 7%;
@@ -247,131 +257,8 @@ section{
     color:#747c8e;
 }
 
-/* =========================
-   المستخدمون
-========================= */
-
-.users{
-    display:grid;
-    grid-template-columns:
-    repeat(3,1fr);
-
-    gap:25px;
-}
-
-.user-box{
-    background:white;
-    padding:35px 25px;
-    text-align:center;
-    border-radius:22px;
-
-    box-shadow:
-    0 8px 30px rgba(0,0,0,.05);
-
-    transition:.3s;
-}
-
-.user-box:hover{
-    transform:translateY(-8px);
-}
-
-.big-icon{
-    width:80px;
-    height:80px;
-
-    margin:0 auto 20px;
-
-    border-radius:22px;
-
-    background:#eeeaff;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:38px;
-}
-
-.user-box h3{
-    margin-bottom:12px;
-}
-
-.user-box p{
-    color:#747c8e;
-    line-height:1.9;
-    font-size:14px;
-}
-
-/* =========================
-   المواد الدراسية
-========================= */
-
-.subjects-section{
-    background:#ffffff;
-}
-
-.subjects{
-    display:grid;
-    grid-template-columns:
-    repeat(3,1fr);
-
-    gap:25px;
-}
-
-.subject{
-    background:#f8f9fd;
-
-    border:1px solid #eeeeee;
-
-    padding:30px;
-
-    border-radius:20px;
-
-    text-align:center;
-
-    transition:.3s;
-}
-
-.subject:hover{
-    transform:translateY(-6px);
-
-    box-shadow:
-    0 12px 30px rgba(0,0,0,.06);
-}
-
-.subject-icon{
-    width:70px;
-    height:70px;
-
-    margin:0 auto 18px;
-
-    border-radius:20px;
-
-    background:#eae7ff;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:32px;
-}
-
-.subject h3{
-    margin-bottom:10px;
-}
-
-.subject p{
-    color:#747c8e;
-    font-size:14px;
-    line-height:1.8;
-}
-
-/* =========================
-   المميزات
-========================= */
-
 .features{
-    background:#f6f8fc;
+    background:white;
 }
 
 .feature-grid{
@@ -384,19 +271,29 @@ section{
 }
 
 .feature{
-    background:white;
+    padding:30px 20px;
 
-    padding:28px 20px;
+    border:1px solid #eeeeee;
 
     border-radius:18px;
 
     text-align:center;
 
-    border:1px solid #eeeeee;
+    background:#fff;
+
+    transition:.3s;
+}
+
+.feature:hover{
+    transform:translateY(-6px);
+
+    box-shadow:
+    0 12px 30px rgba(0,0,0,.06);
 }
 
 .feature-icon{
     font-size:32px;
+
     margin-bottom:15px;
 }
 
@@ -406,85 +303,199 @@ section{
 
 .feature p{
     color:#747c8e;
+
     font-size:13px;
+
     line-height:1.8;
 }
 
-/* =========================
-   تسجيل الدخول
-========================= */
+/* ================= LOGIN ================= */
 
 .login-section{
-    background:#ffffff;
+    background:#f6f8fc;
 }
 
 .login-box{
-    max-width:750px;
+    max-width:850px;
 
     margin:auto;
 
-    background:
-    linear-gradient(
-        135deg,
-        #4936d9,
-        #7669ed
-    );
+    background:white;
 
-    color:white;
+    padding:45px;
 
-    padding:55px 35px;
-
-    border-radius:28px;
-
-    text-align:center;
+    border-radius:25px;
 
     box-shadow:
-    0 20px 50px rgba(73,54,217,.2);
+    0 15px 45px rgba(0,0,0,.08);
+
+    text-align:center;
 }
 
 .login-box h2{
+    color:#4936d9;
+
     font-size:30px;
-    margin-bottom:15px;
+
+    margin-bottom:12px;
 }
 
-.login-box p{
-    line-height:1.9;
-    opacity:.9;
+.login-box > p{
+    color:#747c8e;
+
     margin-bottom:30px;
 }
 
 .login-options{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:12px;
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
 }
 
-.login-options button{
+.role-btn{
     border:none;
 
-    background:white;
+    background:#f7f8fc;
 
-    color:#4936d9;
+    padding:28px 15px;
 
-    padding:14px 24px;
-
-    border-radius:11px;
-
-    font-weight:bold;
+    border-radius:18px;
 
     cursor:pointer;
 
     transition:.3s;
+
+    border:1px solid #eeeeee;
 }
 
-.login-options button:hover{
-    transform:translateY(-3px);
+.role-btn:hover{
+    background:#eeeaff;
+
+    border-color:#4936d9;
+
+    transform:translateY(-5px);
 }
 
-/* =========================
-   الفوتر
-========================= */
+.role-icon{
+    font-size:38px;
+
+    margin-bottom:12px;
+}
+
+.role-btn h3{
+    color:#172033;
+
+    margin-bottom:7px;
+}
+
+.role-btn p{
+    color:#7b8392;
+
+    font-size:12px;
+}
+
+/* ================= LOGIN FORM ================= */
+
+.login-form{
+    display:none;
+
+    max-width:450px;
+
+    margin:30px auto 0;
+
+    text-align:right;
+}
+
+.login-form.show{
+    display:block;
+}
+
+.selected-role{
+    text-align:center;
+
+    color:#4936d9;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    margin-bottom:25px;
+}
+
+.form-group{
+    margin-bottom:17px;
+}
+
+.form-group label{
+    display:block;
+
+    margin-bottom:7px;
+
+    color:#454d5d;
+
+    font-size:14px;
+}
+
+.form-group input{
+    width:100%;
+
+    padding:13px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    outline:none;
+
+    font-size:14px;
+}
+
+.form-group input:focus{
+    border-color:#4936d9;
+}
+
+.submit-btn{
+    width:100%;
+
+    border:none;
+
+    background:#4936d9;
+
+    color:white;
+
+    padding:14px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+    margin-top:5px;
+}
+
+.back-btn{
+    width:100%;
+
+    border:none;
+
+    background:#eeeaff;
+
+    color:#4936d9;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    margin-top:10px;
+}
+
+/* ================= FOOTER ================= */
 
 footer{
     background:#171b2c;
@@ -496,23 +507,19 @@ footer{
     padding:40px 7%;
 }
 
-footer .logo{
-    margin-bottom:12px;
-}
-
 footer p{
     font-size:13px;
-    line-height:1.8;
+
+    margin-top:10px;
 }
 
-/* =========================
-   زر العودة للأعلى
-========================= */
+/* ================= TOP BUTTON ================= */
 
 .top-button{
     position:fixed;
 
     bottom:20px;
+
     left:20px;
 
     width:45px;
@@ -529,14 +536,9 @@ footer p{
     font-size:20px;
 
     cursor:pointer;
-
-    box-shadow:
-    0 5px 20px rgba(0,0,0,.15);
 }
 
-/* =========================
-   الهاتف
-========================= */
+/* ================= MOBILE ================= */
 
 @media(max-width:900px){
 
@@ -550,7 +552,9 @@ footer p{
 
     .hero{
         flex-direction:column;
+
         text-align:center;
+
         padding:60px 5%;
     }
 
@@ -558,18 +562,9 @@ footer p{
         font-size:36px;
     }
 
-    .hero-buttons{
-        justify-content:center;
-    }
-
     .dashboard{
         width:100%;
         max-width:410px;
-    }
-
-    .users,
-    .subjects{
-        grid-template-columns:1fr;
     }
 
     .feature-grid{
@@ -577,9 +572,10 @@ footer p{
         repeat(2,1fr);
     }
 
-    section{
-        padding:55px 5%;
+    .login-options{
+        grid-template-columns:1fr;
     }
+
 }
 
 @media(max-width:500px){
@@ -592,14 +588,6 @@ footer p{
         grid-template-columns:1fr;
     }
 
-    .hero-buttons{
-        flex-direction:column;
-    }
-
-    .btn{
-        display:block;
-    }
-
 }
 
 </style>
@@ -610,9 +598,7 @@ footer p{
 <body>
 
 
-<!-- =========================
-     الشريط العلوي
-========================= -->
+<!-- ================= HEADER ================= -->
 
 <header>
 
@@ -626,12 +612,8 @@ footer p{
             الرئيسية
         </a>
 
-        <a href="#users">
-            المستخدمون
-        </a>
-
         <a href="#subjects">
-            المواد الدراسية
+            المواد
         </a>
 
         <a href="#features">
@@ -640,19 +622,17 @@ footer p{
 
     </nav>
 
-    <a
-        href="#login"
+    <button
         class="login-btn"
+        onclick="goLogin()"
     >
         تسجيل الدخول
-    </a>
+    </button>
 
 </header>
 
 
-<!-- =========================
-     الرئيسية
-========================= -->
+<!-- ================= HOME ================= -->
 
 <section
     class="hero"
@@ -662,7 +642,7 @@ footer p{
     <div class="hero-text">
 
         <div class="badge">
-            🎓 منصة تعليم إلكتروني
+            🎓 منصة التعليم الإلكتروني
         </div>
 
         <h1>
@@ -676,55 +656,40 @@ footer p{
 
         <p>
 
-            منصتي منصة تعليمية متكاملة
-            تساعد الطلاب على متابعة دراستهم،
-            وتمكّن المعلمين من إدارة الدروس،
-            وتوفر لمدير النظام أدوات لإدارة
-            المنصة والمستخدمين.
+            منصتي منصة تعليمية تساعد
+            الطلاب والمعلمين على تنظيم
+            العملية التعليمية في مكان واحد.
 
         </p>
 
-        <div class="hero-buttons">
-
-            <a
-                href="#login"
-                class="btn primary"
-            >
-                ابدأ الآن
-            </a>
-
-            <a
-                href="#subjects"
-                class="btn secondary"
-            >
-                المواد الدراسية
-            </a>
-
-        </div>
+        <button
+            class="start-btn"
+            onclick="goLogin()"
+        >
+            ابدأ الآن
+        </button>
 
     </div>
 
-
-    <!-- بطاقة توضيحية -->
 
     <div class="dashboard">
 
         <div class="dashboard-top">
 
             <h3>
-                منصة منصتي
+                منصتي
             </h3>
 
             <p>
-                نظام تعليمي متكامل
+                منصة تعليمية متكاملة
             </p>
 
         </div>
 
 
-        <div class="user-card">
+        <div class="dashboard-item">
 
-            <div class="user-icon">
+            <div class="dashboard-icon">
                 👨‍🎓
             </div>
 
@@ -735,7 +700,7 @@ footer p{
                 </strong>
 
                 <p>
-                    الدروس والواجبات والنتائج
+                    متابعة الدروس والواجبات
                 </p>
 
             </div>
@@ -743,9 +708,9 @@ footer p{
         </div>
 
 
-        <div class="user-card">
+        <div class="dashboard-item">
 
-            <div class="user-icon">
+            <div class="dashboard-icon">
                 👨‍🏫
             </div>
 
@@ -756,7 +721,7 @@ footer p{
                 </strong>
 
                 <p>
-                    إدارة الحصص والطلاب
+                    إدارة الحصص والدروس
                 </p>
 
             </div>
@@ -764,9 +729,9 @@ footer p{
         </div>
 
 
-        <div class="user-card">
+        <div class="dashboard-item">
 
-            <div class="user-icon">
+            <div class="dashboard-icon">
                 ⚙️
             </div>
 
@@ -777,7 +742,7 @@ footer p{
                 </strong>
 
                 <p>
-                    إدارة المنصة والمستخدمين
+                    إدارة المنصة
                 </p>
 
             </div>
@@ -789,102 +754,9 @@ footer p{
 </section>
 
 
-<!-- =========================
-     المستخدمون
-========================= -->
-
-<section id="users">
-
-    <div class="section-title">
-
-        <h2>
-            مستخدمو منصتي
-        </h2>
-
-        <p>
-            لكل مستخدم صلاحيات ووظائف خاصة به
-        </p>
-
-    </div>
-
-
-    <div class="users">
-
-
-        <div class="user-box">
-
-            <div class="big-icon">
-                👨‍🎓
-            </div>
-
-            <h3>
-                الطالب
-            </h3>
-
-            <p>
-
-                يستطيع الطالب الدخول إلى المواد،
-                مشاهدة الدروس والحصص،
-                متابعة الواجبات والنتائج.
-
-            </p>
-
-        </div>
-
-
-        <div class="user-box">
-
-            <div class="big-icon">
-                👨‍🏫
-            </div>
-
-            <h3>
-                المعلم
-            </h3>
-
-            <p>
-
-                يستطيع المعلم إدارة الحصص،
-                إضافة الدروس والواجبات،
-                ومتابعة الطلاب.
-
-            </p>
-
-        </div>
-
-
-        <div class="user-box">
-
-            <div class="big-icon">
-                ⚙️
-            </div>
-
-            <h3>
-                مدير النظام
-            </h3>
-
-            <p>
-
-                يستطيع مدير النظام إدارة
-                الطلاب والمعلمين والمواد
-                ومتابعة النظام بالكامل.
-
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     المواد الدراسية
-========================= -->
+<!-- ================= SUBJECTS TITLE ================= -->
 
 <section
-    class="subjects-section"
     id="subjects"
 >
 
@@ -895,77 +767,15 @@ footer p{
         </h2>
 
         <p>
-            هنا ستظهر المواد التي تتم إضافتها إلى المنصة
+            يمكن الوصول إلى المواد الدراسية من حسابك بعد تسجيل الدخول
         </p>
-
-    </div>
-
-
-    <div class="subjects">
-
-
-        <div class="subject">
-
-            <div class="subject-icon">
-                📚
-            </div>
-
-            <h3>
-                مادة دراسية
-            </h3>
-
-            <p>
-                سيتم إضافة اسم المادة
-                ومحتواها لاحقًا.
-            </p>
-
-        </div>
-
-
-        <div class="subject">
-
-            <div class="subject-icon">
-                📖
-            </div>
-
-            <h3>
-                مادة دراسية
-            </h3>
-
-            <p>
-                سيتم إضافة اسم المادة
-                ومحتواها لاحقًا.
-            </p>
-
-        </div>
-
-
-        <div class="subject">
-
-            <div class="subject-icon">
-                📝
-            </div>
-
-            <h3>
-                مادة دراسية
-            </h3>
-
-            <p>
-                سيتم إضافة اسم المادة
-                ومحتواها لاحقًا.
-            </p>
-
-        </div>
-
 
     </div>
 
 </section>
 
 
-<!-- =========================
-     المميزات
-========================= -->
+<!-- ================= FEATURES ================= -->
 
 <section
     class="features"
@@ -975,11 +785,11 @@ footer p{
     <div class="section-title">
 
         <h2>
-            مميزات المنصة
+            مميزات منصتي
         </h2>
 
         <p>
-            أدوات تساعد على تنظيم عملية التعليم
+            كل ما تحتاجه لتنظيم عملية التعليم
         </p>
 
     </div>
@@ -999,8 +809,7 @@ footer p{
             </h3>
 
             <p>
-                عرض وتنظيم المحتوى
-                والدروس التعليمية.
+                متابعة الدروس والمحتوى التعليمي.
             </p>
 
         </div>
@@ -1017,8 +826,7 @@ footer p{
             </h3>
 
             <p>
-                إنشاء ومتابعة الواجبات
-                والأنشطة الدراسية.
+                إدارة ومتابعة الواجبات الدراسية.
             </p>
 
         </div>
@@ -1035,7 +843,7 @@ footer p{
             </h3>
 
             <p>
-                متابعة نتائج وتقدم الطلاب.
+                متابعة الدرجات والنتائج.
             </p>
 
         </div>
@@ -1052,7 +860,7 @@ footer p{
             </h3>
 
             <p>
-                صلاحيات مختلفة لكل مستخدم.
+                نظام صلاحيات للطلاب والمعلمين والمدير.
             </p>
 
         </div>
@@ -1063,9 +871,7 @@ footer p{
 </section>
 
 
-<!-- =========================
-     تسجيل الدخول
-========================= -->
+<!-- ================= LOGIN ================= -->
 
 <section
     class="login-section"
@@ -1075,34 +881,138 @@ footer p{
     <div class="login-box">
 
         <h2>
-            الدخول إلى منصتي
+            تسجيل الدخول
         </h2>
 
         <p>
-            اختر نوع الحساب للدخول إلى المساحة الخاصة بك.
+            اختاري نوع الحساب للدخول إلى منصتك
         </p>
 
 
-        <div class="login-options">
+        <!-- اختيار المستخدم -->
+
+        <div
+            class="login-options"
+            id="roleOptions"
+        >
 
             <button
-                onclick="login('الطالب')"
+                class="role-btn"
+                onclick="selectRole('الطالب')"
             >
-                👨‍🎓 طالب
+
+                <div class="role-icon">
+                    👨‍🎓
+                </div>
+
+                <h3>
+                    الطالب
+                </h3>
+
+                <p>
+                    الدخول إلى حساب الطالب
+                </p>
+
             </button>
 
 
             <button
-                onclick="login('المعلم')"
+                class="role-btn"
+                onclick="selectRole('المعلم')"
             >
-                👨‍🏫 معلم
+
+                <div class="role-icon">
+                    👨‍🏫
+                </div>
+
+                <h3>
+                    المعلم
+                </h3>
+
+                <p>
+                    الدخول إلى حساب المعلم
+                </p>
+
             </button>
 
 
             <button
-                onclick="login('مدير النظام')"
+                class="role-btn"
+                onclick="selectRole('مدير النظام')"
             >
-                ⚙️ مدير النظام
+
+                <div class="role-icon">
+                    ⚙️
+                </div>
+
+                <h3>
+                    مدير النظام
+                </h3>
+
+                <p>
+                    الدخول إلى لوحة الإدارة
+                </p>
+
+            </button>
+
+        </div>
+
+
+        <!-- نموذج تسجيل الدخول -->
+
+        <div
+            class="login-form"
+            id="loginForm"
+        >
+
+            <div
+                class="selected-role"
+                id="selectedRole"
+            >
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    البريد الإلكتروني
+                </label>
+
+                <input
+                    type="email"
+                    placeholder="أدخل البريد الإلكتروني"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    كلمة المرور
+                </label>
+
+                <input
+                    type="password"
+                    placeholder="أدخل كلمة المرور"
+                >
+
+            </div>
+
+
+            <button
+                class="submit-btn"
+                onclick="loginUser()"
+            >
+                دخول
+            </button>
+
+
+            <button
+                class="back-btn"
+                onclick="backToRoles()"
+            >
+                العودة لاختيار نوع الحساب
             </button>
 
         </div>
@@ -1112,9 +1022,7 @@ footer p{
 </section>
 
 
-<!-- =========================
-     الفوتر
-========================= -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -1133,11 +1041,14 @@ footer p{
 </footer>
 
 
-<!-- زر العودة للأعلى -->
+<!-- ================= TOP BUTTON ================= -->
 
 <button
     class="top-button"
-    onclick="window.scrollTo({top:0,behavior:'smooth'})"
+    onclick="window.scrollTo({
+        top:0,
+        behavior:'smooth'
+    })"
 >
     ↑
 </button>
@@ -1145,12 +1056,60 @@ footer p{
 
 <script>
 
-function login(type){
+/* الانتقال لتسجيل الدخول */
+
+function goLogin(){
+
+    document
+    .getElementById("login")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* اختيار نوع الحساب */
+
+function selectRole(role){
+
+    document
+    .getElementById("roleOptions")
+    .style.display="none";
+
+    document
+    .getElementById("loginForm")
+    .classList.add("show");
+
+    document
+    .getElementById("selectedRole")
+    .innerHTML=
+    "تسجيل الدخول — " + role;
+
+}
+
+
+/* العودة لاختيار المستخدم */
+
+function backToRoles(){
+
+    document
+    .getElementById("loginForm")
+    .classList.remove("show");
+
+    document
+    .getElementById("roleOptions")
+    .style.display="grid";
+
+}
+
+
+/* زر الدخول */
+
+function loginUser(){
 
     alert(
-        "تم اختيار حساب " +
-        type +
-        "\nسيتم تجهيز صفحة الدخول الخاصة به في الخطوة القادمة."
+        "تم إرسال بيانات تسجيل الدخول."
     );
 
 }
